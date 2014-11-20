@@ -40,7 +40,7 @@ class FolderIndex:
     ################################################################################
     # Constants
     ################################################################################
-    TEMPLATE_XML_FILENAME = "scripts/index_template.xml"
+    TEMPLATE_XML_FILENAME = "index_template.xml"
     INDEX_FILENAME = "index.html"
     INFO_FILENAME = "info"
 
@@ -78,7 +78,8 @@ class FolderIndex:
         return (node.text or '') + ''.join(map(et.tostring, node)) + (node.tail or '')
 
     def getTemplates(self):
-        with open(self.TEMPLATE_XML_FILENAME, 'r') as f:
+        template_xml_filepath = os.path.join(os.path.dirname(os.path.realpath(__file__)), self.TEMPLATE_XML_FILENAME)
+        with open(template_xml_filepath, 'r') as f:
             template_xml = et.parse(f)
 
         main_template = self.innerNodeToString(template_xml.findall(".//main_html")[0])
