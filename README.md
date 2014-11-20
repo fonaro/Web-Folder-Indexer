@@ -7,6 +7,14 @@ Usage
 ==================
 index.py [directory, path_name]
 
+directory: The base directory to index (default: current directory)
+path_name: The path that will appear in the title of the page as the
+           current path base (default: the folder name)
+
+Example:
+    The command "index.py ~/.www/files home/files" will create index for the
+    folder files and its subfolders. The title of the page will be "home/files".
+
 This will create an index.html file for every folder in the subtree of the given
 folder (or the current folder if not specified).
 If an info file exist (should be json/dict), it will be visible in the folder's
@@ -14,3 +22,8 @@ page.
 
 NOTICE: This script also makes sure all of the files are visible to the public.
 (i.e. "chmod 755 <file>" for all the files)
+
+Author
+==================
+Liran Funaro
+fonaro@cs.technion.ac.il
