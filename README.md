@@ -10,14 +10,18 @@ NOTICE: This script also makes sure all of the files are visible to the public.
 
 Usage
 ==================
-    index.py [directory, path_name]
+```
+index.py [directory, path_name]
+```
 
 - directory: The base directory to index (default: current directory)
 - path_name: The path that will appear in the title of the page as the current path base (default: the folder name)
 
 Example:
 The command
-    index.py ~/.www/files home/files
+```
+index.py ~/.www/files home/files
+```
 will create index for the folder files and its subfolders. The title of the page will be "home/files".
 
 Author
