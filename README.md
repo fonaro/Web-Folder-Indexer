@@ -5,7 +5,7 @@ Creates an index.html file for the content of a folder and a subfolder, and allo
 
 Usage
 ==================
-index.py [<directory>, <path_name>]
+index.py [directory, path_name]
 
 This will create an index.html file for every folder in the subtree of the given
 folder (or the current folder if not specified).
